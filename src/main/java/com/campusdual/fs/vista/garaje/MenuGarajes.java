@@ -8,6 +8,6 @@ public class MenuGarajes extends MenuViewLocal {
         super("Gestionando Garages", "Gestor de Garages");
         this.addMenuItem(new ActionGarajeLista());
         this.addMenuItem(new ActionGarajeAgregar());
-        this.addMenuItem(new MenuGarajesGestion());
+        this.addMenuItem(new MenuGarajesLista());
     }
 }

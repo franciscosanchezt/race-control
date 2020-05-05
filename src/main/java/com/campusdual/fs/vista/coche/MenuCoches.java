@@ -8,5 +8,6 @@ public class MenuCoches extends MenuViewLocal {
         super("Gestionando Coches", "Gestor de Coches");
         this.addMenuItem(new ActionCocheLista());
         this.addMenuItem(new ActionCocheAgregar());
+        this.addMenuItem(new MenuCochesLista());
     }
 }

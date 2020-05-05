@@ -13,7 +13,7 @@ public class ActionCocheAgregar extends ActionViewLocal {
     public void executeCustomAction() {
         String marca = this.prompt("Introduce la marca: ", String.class);
         String modelo = this.prompt("Introduce el modelo: ", String.class);
-        if (marca.length() > 1 && modelo.length() > 1) {
+        if (marca.length() > 0 && modelo.length() > 0) {
             CocheDao.getInstance().insertarCoche(marca, modelo);
             this.actionSuccessful();
         } else

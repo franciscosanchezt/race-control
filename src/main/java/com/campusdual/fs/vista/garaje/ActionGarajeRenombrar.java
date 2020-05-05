@@ -17,7 +17,7 @@ public class ActionGarajeRenombrar extends ActionViewLocal {
     @Override
     public void executeCustomAction() {
         String nuevoNombre = this.prompt("Nuevo Nombre: ", String.class);
-        if (nuevoNombre.length() > 1) {
+        if (nuevoNombre.length() > 0) {
             this.garaje.setNombre(nuevoNombre);
             this.parent.refrescarGaraje();
             this.actionSuccessful();

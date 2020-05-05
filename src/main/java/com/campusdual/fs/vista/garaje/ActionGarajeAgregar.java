@@ -12,7 +12,7 @@ public class ActionGarajeAgregar extends ActionViewLocal {
     @Override
     public void executeCustomAction() {
         String nombre = this.prompt("Introduce el nombre del Garaje: ", String.class);
-        if (nombre.length() > 1) {
+        if (nombre.length() > 0) {
             GarajeDao.getInstance().insertarGaraje(nombre);
             this.actionSuccessful();
         } else

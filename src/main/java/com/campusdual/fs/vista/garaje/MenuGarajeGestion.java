@@ -5,11 +5,11 @@ import com.campusdual.fs.vista.MenuViewLocal;
 
 public class MenuGarajeGestion extends MenuViewLocal {
 
-    private final MenuGarajesGestion parent;
+    private final MenuGarajesLista parent;
     private final Garaje garaje;
 
-    public MenuGarajeGestion(MenuGarajesGestion parent, Garaje garaje) {
-        super("Gestionando Garage: " + garaje.getNombre(), garaje.getNombre());
+    public MenuGarajeGestion(MenuGarajesLista parent, Garaje garaje) {
+        super("Editando Garage: " + garaje.getNombre(), garaje.getNombre());
         this.parent = parent;
         this.garaje = garaje;
         this.addMenuItem(new ActionGarajeRenombrar(this, this.garaje));

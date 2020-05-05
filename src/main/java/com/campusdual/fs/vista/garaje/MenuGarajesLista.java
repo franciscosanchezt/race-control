@@ -8,12 +8,12 @@ import io.bretty.console.view.AbstractView;
 import java.util.ArrayList;
 import java.util.Collection;
 
-public class MenuGarajesGestion extends ActionViewLocal {
+public class MenuGarajesLista extends ActionViewLocal {
 
     private final MenuViewLocal menuViewLocal = new MenuViewLocal("Elige un Garaje", "");
 
-    public MenuGarajesGestion() {
-        super("Elige un Garaje", "Gestionar Garajes");
+    public MenuGarajesLista() {
+        super("Elige un Garaje", "Editar Garajes");
 
     }
 
