@@ -1,6 +1,7 @@
-package com.campusdual.fs.vista;
+package com.campusdual.fs.vista.coche;
 
 import com.campusdual.fs.data.CocheDao;
+import com.campusdual.fs.vista.ActionViewLocal;
 
 public class ActionCocheAgregar extends ActionViewLocal {
 

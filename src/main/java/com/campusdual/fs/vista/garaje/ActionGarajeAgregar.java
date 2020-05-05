@@ -1,6 +1,7 @@
-package com.campusdual.fs.vista;
+package com.campusdual.fs.vista.garaje;
 
 import com.campusdual.fs.data.GarajeDao;
+import com.campusdual.fs.vista.ActionViewLocal;
 
 public class ActionGarajeAgregar extends ActionViewLocal {
 

@@ -1,5 +1,8 @@
 package com.campusdual.fs.vista;
 
+import com.campusdual.fs.vista.coche.MenuCoches;
+import com.campusdual.fs.vista.garaje.MenuGarajes;
+
 public class MainMenuView extends MenuViewLocal {
 
 

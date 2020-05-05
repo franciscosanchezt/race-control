@@ -7,6 +7,7 @@ public class Coche {
     private int id;
     private String marca;
     private String modelo;
+    private Garaje garaje;
     private static int velocidadMaxima = 10;
 
     public Coche(int id, String marca, String modelo) {
@@ -47,12 +48,21 @@ public class Coche {
         Coche.velocidadMaxima = velocidadMaxima;
     }
 
+    public Garaje getGaraje() {
+        return garaje;
+    }
+
+    public void setGaraje(Garaje garaje) {
+        this.garaje = garaje;
+    }
+
     @Override
     public String toString() {
         return new StringJoiner(", ", Coche.class.getSimpleName() + "[", "]")
             .add("id=" + id)
             .add("marca='" + marca + "'")
             .add("modelo='" + modelo + "'")
+            .add("garaje=" + garaje.getNombre())
             .toString();
     }
 }

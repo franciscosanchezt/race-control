@@ -30,6 +30,10 @@ public class Garaje {
         this.nombre = nombre;
     }
 
+    public ArrayList<Coche> getCoches() {
+        return coches;
+    }
+
     @Override
     public String toString() {
         return new StringJoiner(", ", Garaje.class.getSimpleName() + "[", "]")

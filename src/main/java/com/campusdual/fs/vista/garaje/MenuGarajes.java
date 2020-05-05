@@ -1,4 +1,6 @@
-package com.campusdual.fs.vista;
+package com.campusdual.fs.vista.garaje;
+
+import com.campusdual.fs.vista.MenuViewLocal;
 
 public class MenuGarajes extends MenuViewLocal {
 
@@ -6,5 +8,6 @@ public class MenuGarajes extends MenuViewLocal {
         super("Gestionando Garages", "Gestor de Garages");
         this.addMenuItem(new ActionGarajeLista());
         this.addMenuItem(new ActionGarajeAgregar());
+        this.addMenuItem(new MenuGarajesGestion());
     }
 }
