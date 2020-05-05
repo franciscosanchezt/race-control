@@ -65,4 +65,8 @@ public class Coche {
             .add("garaje=" + garaje.getNombre())
             .toString();
     }
+
+    public String toCompactString() {
+        return "(" + this.getId() + ") " + this.getMarca() + ", " + this.getModelo();
+    }
 }

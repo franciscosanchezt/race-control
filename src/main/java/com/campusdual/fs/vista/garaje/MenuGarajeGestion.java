@@ -14,11 +14,12 @@ public class MenuGarajeGestion extends MenuViewLocal {
         this.garaje = garaje;
         this.addMenuItem(new ActionGarajeRenombrar(this, this.garaje));
         this.addMenuItem(new MenuGarajeRegistrarCoches(this, this.garaje));
+        this.addMenuItem(new MenuGarajeEliminarCoche(this.garaje));
         this.setParentView(parent);
     }
 
     public void refrescarGaraje() {
-        setRunningTitle("Gestionando Garage: " + garaje.getNombre());
+        setRunningTitle("Editando Garage: " + garaje.getNombre());
         setNameInParentMenu(garaje.getNombre());
         parent.refrescarGarajes();
     }
