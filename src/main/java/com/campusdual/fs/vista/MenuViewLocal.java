@@ -3,7 +3,7 @@ package com.campusdual.fs.vista;
 import io.bretty.console.view.MenuView;
 import io.bretty.console.view.ViewConfig;
 
-public class MainMenu extends MenuView {
+public class MenuViewLocal extends MenuView {
 
     public static ViewConfig viewConfig = new ViewConfig.Builder()
         .setMenuSelectionMessage("Introduce un numero para continuar: ")
@@ -16,7 +16,7 @@ public class MainMenu extends MenuView {
         .setQuitMenuName("Salir")
         .build();
 
-    public MainMenu() {
-        super("Race Control | v-0.0.1", "", MainMenu.viewConfig);
+    public MenuViewLocal(String runningTitle, String nameInParentMenu) {
+        super(runningTitle, nameInParentMenu, MenuViewLocal.viewConfig);
     }
 }

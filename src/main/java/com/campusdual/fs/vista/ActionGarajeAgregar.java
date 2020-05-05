@@ -1,0 +1,20 @@
+package com.campusdual.fs.vista;
+
+import com.campusdual.fs.data.GarajeDao;
+
+public class ActionGarajeAgregar extends ActionViewLocal {
+
+    public ActionGarajeAgregar() {
+        super("Creando Nuevo Garaje", "Crear Garaje");
+    }
+
+    @Override
+    public void executeCustomAction() {
+        String nombre = this.prompt("Introduce el nombre del Garaje: ", String.class);
+        if (nombre.length() > 1) {
+            GarajeDao.getInstance().insertarGaraje(nombre);
+            this.actionSuccessful();
+        } else
+            actionFailed();
+    }
+}

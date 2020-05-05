@@ -1,11 +1,11 @@
 package com.campusdual.fs.testube;
 
-import com.campusdual.fs.vista.MainMenu;
+import com.campusdual.fs.vista.MainMenuView;
 
 public class TestMain {
 
     public static void main(String[] args) {
-        MainMenu menu = new MainMenu();
+        MainMenuView menu = new MainMenuView();
         menu.display();
     }
 }
