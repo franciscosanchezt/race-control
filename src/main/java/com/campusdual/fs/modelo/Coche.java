@@ -62,7 +62,7 @@ public class Coche {
             .add("id=" + id)
             .add("marca='" + marca + "'")
             .add("modelo='" + modelo + "'")
-            .add("garaje=" + garaje.getNombre())
+            .add("garaje=" + (garaje != null ? garaje.getNombre() : "null"))
             .toString();
     }
 

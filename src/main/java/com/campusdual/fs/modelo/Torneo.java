@@ -6,5 +6,7 @@ public class Torneo {
 
     private final Carrera[] carreras = new Carrera[10];
     private final HashMap<Coche, Integer> participantes = new HashMap<>();
+    private final Garaje garaje = null;
+
 
 }
