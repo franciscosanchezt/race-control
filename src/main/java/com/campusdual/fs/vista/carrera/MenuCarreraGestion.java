@@ -17,6 +17,8 @@ public class MenuCarreraGestion extends MenuViewLocal {
         this.addMenuItem(new ActionCarreraCambiarTipo(this.carrera));
         this.addMenuItem(new MenuCarreraSeleccionarGaraje(this.carrera));
         this.addMenuItem(new ActionCarreraEliminarGaraje(this.carrera));
+        this.addMenuItem(new MenuCarreraAgregarCoche(this.carrera));
+        this.addMenuItem(new MenuCarreraEliminarCoche(this.carrera));
         this.setParentView(parent);
     }
 

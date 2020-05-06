@@ -37,7 +37,9 @@ public class MenuGarajeRegistrarCoches extends ActionViewLocal {
     }
 
     private void cargarCochesLibres() {
-        coches = coches.stream().filter(coche -> coche.getGaraje() == null).collect(Collectors.toCollection(ArrayList::new));
+        coches = coches.stream()
+                       .filter(coche -> coche.getGaraje() == null)
+                       .collect(Collectors.toCollection(ArrayList::new));
         ArrayList<AbstractView> garagesMenu = new ArrayList<>();
         for (Coche garaje : coches) {
             garagesMenu.add(new ActionGarajeRegistrarCoche(this.parent, this.garaje, garaje));
