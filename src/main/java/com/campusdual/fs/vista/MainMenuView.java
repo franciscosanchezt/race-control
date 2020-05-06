@@ -4,6 +4,7 @@ import com.campusdual.fs.vista.carrera.MenuCarreras;
 import com.campusdual.fs.vista.coche.MenuCoches;
 import com.campusdual.fs.vista.garaje.MenuGarajes;
 import com.campusdual.fs.vista.local.MenuViewLocal;
+import com.campusdual.fs.vista.persistencia.MenuPersistencia;
 import com.campusdual.fs.vista.torneo.MenuTorneos;
 
 public class MainMenuView extends MenuViewLocal {
@@ -15,5 +16,6 @@ public class MainMenuView extends MenuViewLocal {
         this.addMenuItem(new MenuGarajes());
         this.addMenuItem(new MenuCarreras());
         this.addMenuItem(new MenuTorneos());
+        this.addMenuItem(new MenuPersistencia());
     }
 }

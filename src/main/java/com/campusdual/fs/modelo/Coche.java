@@ -1,8 +1,9 @@
 package com.campusdual.fs.modelo;
 
+import java.io.Serializable;
 import java.util.StringJoiner;
 
-public class Coche {
+public class Coche implements Serializable {
 
     private int id;
     private String marca;

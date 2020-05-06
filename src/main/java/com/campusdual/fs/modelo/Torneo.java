@@ -1,11 +1,11 @@
 package com.campusdual.fs.modelo;
 
-import com.campusdual.fs.modelo.Carrera.TipoDeCompeticion;
+import java.io.Serializable;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.StringJoiner;
 
-public class Torneo {
+public class Torneo implements Serializable {
 
     private String nombre;
     private final Carrera[] carreras = new Carrera[10];

@@ -4,12 +4,13 @@ import com.campusdual.fs.modelo.Coche;
 import com.campusdual.fs.modelo.Garaje;
 import java.io.File;
 import java.io.IOException;
+import java.io.Serializable;
 import java.nio.file.Files;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class CocheDao {
+public class CocheDao implements Serializable {
 
     //Singleton instance
     private static CocheDao instance;
@@ -29,7 +30,7 @@ public class CocheDao {
     }
 
     private int siguienteId = 0;
-    private final HashMap<Integer, Coche> coches = new HashMap<>();
+    private HashMap<Integer, Coche> coches = new HashMap<>();
 
     public void insertarCoche(String marca, String modelo) {
         coches.put(siguienteId, new Coche(siguienteId, marca, modelo));
@@ -60,5 +61,19 @@ public class CocheDao {
         return count.get();
     }
 
+    int getSiguienteId() {
+        return siguienteId;
+    }
 
+    HashMap<Integer, Coche> getMap() {
+        return coches;
+    }
+
+    void setMap(HashMap<Integer, Coche> coches) {
+        this.coches = coches;
+    }
+
+    void setSiguienteId(int siguienteId) {
+        this.siguienteId = siguienteId;
+    }
 }

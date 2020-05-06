@@ -1,8 +1,9 @@
 package com.campusdual.fs.data;
 
 import com.campusdual.fs.modelo.Torneo;
+import java.io.Serializable;
 
-public class TorneoDao {
+public class TorneoDao implements Serializable {
 
     //Singleton instance
     private static TorneoDao instance;

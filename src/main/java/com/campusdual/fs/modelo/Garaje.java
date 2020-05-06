@@ -1,9 +1,10 @@
 package com.campusdual.fs.modelo;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.StringJoiner;
 
-public class Garaje {
+public class Garaje implements Serializable {
 
     private int id;
     private String nombre;

@@ -1,7 +1,7 @@
 package com.campusdual.fs.vista.carrera;
 
 import com.campusdual.fs.modelo.Carrera;
-import com.campusdual.fs.modelo.Carrera.TipoDeCompeticion;
+import com.campusdual.fs.modelo.TipoDeCompeticion;
 import com.campusdual.fs.vista.local.ActionViewLocal;
 
 public class ActionCarreraCambiarTipo extends ActionViewLocal {

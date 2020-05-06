@@ -2,7 +2,7 @@ package com.campusdual.fs.vista.torneo;
 
 import com.campusdual.fs.data.CarreraDao;
 import com.campusdual.fs.data.TorneoDao;
-import com.campusdual.fs.modelo.Carrera.TipoDeCompeticion;
+import com.campusdual.fs.modelo.TipoDeCompeticion;
 import com.campusdual.fs.modelo.Torneo;
 import com.campusdual.fs.vista.local.ActionViewLocal;
 

@@ -1,11 +1,12 @@
 package com.campusdual.fs.data;
 
 import com.campusdual.fs.modelo.Carrera;
-import com.campusdual.fs.modelo.Carrera.TipoDeCompeticion;
+import com.campusdual.fs.modelo.TipoDeCompeticion;
+import java.io.Serializable;
 import java.util.Collection;
 import java.util.HashMap;
 
-public class CarreraDao {
+public class CarreraDao implements Serializable {
 
     //Singleton instance
     private static CarreraDao instance;
@@ -25,7 +26,7 @@ public class CarreraDao {
     }
 
     private int siguienteId = 0;
-    private final HashMap<Integer, Carrera> carreras = new HashMap<>();
+    private HashMap<Integer, Carrera> carreras = new HashMap<>();
 
     public Carrera insertarCarrera(String nombre, TipoDeCompeticion tipoDeCompeticion) {
         Carrera carrera = new Carrera(siguienteId, nombre, tipoDeCompeticion);
@@ -38,5 +39,19 @@ public class CarreraDao {
         return carreras.values();
     }
 
+    int getSiguienteId() {
+        return siguienteId;
+    }
 
+    HashMap<Integer, Carrera> getMap() {
+        return carreras;
+    }
+
+    void setSiguienteId(int siguienteId) {
+        this.siguienteId = siguienteId;
+    }
+
+    void setMap(HashMap<Integer, Carrera> carreras) {
+        this.carreras = carreras;
+    }
 }

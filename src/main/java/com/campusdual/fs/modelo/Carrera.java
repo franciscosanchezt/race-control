@@ -1,9 +1,10 @@
 package com.campusdual.fs.modelo;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.StringJoiner;
 
-public class Carrera {
+public class Carrera implements Serializable {
 
     private int id;
     private String nombre;
@@ -11,11 +12,6 @@ public class Carrera {
     private TipoDeCompeticion tipoDeCompeticion;
     private Garaje garaje = null;
 
-
-    public enum TipoDeCompeticion {
-        ESTANDAR,
-        ELIMINACION
-    }
 
     public Carrera(int id, String nombre, TipoDeCompeticion tipoDeCompeticion) {
         this.id                = id;
