@@ -2,7 +2,7 @@ package com.campusdual.fs.vista.garaje;
 
 import com.campusdual.fs.data.CocheDao;
 import com.campusdual.fs.modelo.Garaje;
-import com.campusdual.fs.vista.ActionViewLocal;
+import com.campusdual.fs.vista.local.ActionViewLocal;
 import java.io.File;
 
 public class ActionGarajeRegistroMasivo extends ActionViewLocal {

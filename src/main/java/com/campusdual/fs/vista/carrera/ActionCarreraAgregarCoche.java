@@ -2,7 +2,7 @@ package com.campusdual.fs.vista.carrera;
 
 import com.campusdual.fs.modelo.Carrera;
 import com.campusdual.fs.modelo.Coche;
-import com.campusdual.fs.vista.ActionViewLocal;
+import com.campusdual.fs.vista.local.ActionViewLocal;
 import io.bretty.console.view.AbstractView;
 
 public class ActionCarreraAgregarCoche extends ActionViewLocal {

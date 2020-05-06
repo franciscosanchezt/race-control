@@ -2,7 +2,7 @@ package com.campusdual.fs.vista.coche;
 
 import com.campusdual.fs.modelo.Coche;
 import com.campusdual.fs.modelo.Garaje;
-import com.campusdual.fs.vista.ActionViewLocal;
+import com.campusdual.fs.vista.local.ActionViewLocal;
 import io.bretty.console.view.AbstractView;
 
 public class ActionCocheSeleccionarGaraje extends ActionViewLocal {

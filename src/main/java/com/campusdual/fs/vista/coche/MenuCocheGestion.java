@@ -1,7 +1,7 @@
 package com.campusdual.fs.vista.coche;
 
 import com.campusdual.fs.modelo.Coche;
-import com.campusdual.fs.vista.MenuViewLocal;
+import com.campusdual.fs.vista.local.MenuViewLocal;
 
 public class MenuCocheGestion extends MenuViewLocal {
 

@@ -2,10 +2,10 @@ package com.campusdual.fs.vista.carrera;
 
 import com.campusdual.fs.modelo.Carrera;
 import com.campusdual.fs.modelo.Garaje;
-import com.campusdual.fs.vista.ActionViewLocal;
+import com.campusdual.fs.vista.local.ActionViewLocal;
 import io.bretty.console.view.AbstractView;
 
-class ActionCarreraEstablecerGaraje extends ActionViewLocal {
+public class ActionCarreraEstablecerGaraje extends ActionViewLocal {
 
     private final Carrera carrera;
     private final Garaje garaje;

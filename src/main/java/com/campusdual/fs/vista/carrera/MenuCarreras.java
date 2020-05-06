@@ -1,6 +1,6 @@
 package com.campusdual.fs.vista.carrera;
 
-import com.campusdual.fs.vista.MenuViewLocal;
+import com.campusdual.fs.vista.local.MenuViewLocal;
 
 public class MenuCarreras extends MenuViewLocal {
 

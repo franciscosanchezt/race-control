@@ -1,8 +1,8 @@
 package com.campusdual.fs.vista.carrera;
 
 import com.campusdual.fs.modelo.Carrera;
-import com.campusdual.fs.modelo.Carrera.TipoDeCarrera;
-import com.campusdual.fs.vista.ActionViewLocal;
+import com.campusdual.fs.modelo.Carrera.TipoDeCompeticion;
+import com.campusdual.fs.vista.local.ActionViewLocal;
 
 public class ActionCarreraCambiarTipo extends ActionViewLocal {
 
@@ -16,7 +16,7 @@ public class ActionCarreraCambiarTipo extends ActionViewLocal {
     @Override
     public void executeCustomAction() {
         boolean estandar = confirmDialog("Carrera estandar?");
-        carrera.setTipoDeCarrera(estandar ? TipoDeCarrera.ESTANDAR : TipoDeCarrera.ELIMINACION);
+        carrera.setTipoDeCompeticion(estandar ? TipoDeCompeticion.ESTANDAR : TipoDeCompeticion.ELIMINACION);
         actionSuccessful();
     }
 }

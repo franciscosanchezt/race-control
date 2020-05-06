@@ -1,7 +1,7 @@
 package com.campusdual.fs.vista.coche;
 
 import com.campusdual.fs.modelo.Coche;
-import com.campusdual.fs.vista.ActionViewLocal;
+import com.campusdual.fs.vista.local.ActionViewLocal;
 
 public class ActionCocheEditar extends ActionViewLocal {
 

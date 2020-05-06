@@ -2,7 +2,7 @@ package com.campusdual.fs.vista.garaje;
 
 import com.campusdual.fs.modelo.Coche;
 import com.campusdual.fs.modelo.Garaje;
-import com.campusdual.fs.vista.ActionViewLocal;
+import com.campusdual.fs.vista.local.ActionViewLocal;
 
 public class ActionGarajeEliminarCoche extends ActionViewLocal {
 

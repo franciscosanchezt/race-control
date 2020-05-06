@@ -1,7 +1,7 @@
 package com.campusdual.fs.vista.carrera;
 
 import com.campusdual.fs.modelo.Carrera;
-import com.campusdual.fs.vista.ActionViewLocal;
+import com.campusdual.fs.vista.local.ActionViewLocal;
 
 public class ActionCarreraEliminarGaraje extends ActionViewLocal {
 

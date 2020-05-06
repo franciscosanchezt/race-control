@@ -1,7 +1,7 @@
 package com.campusdual.fs.vista.garaje;
 
 import com.campusdual.fs.modelo.Garaje;
-import com.campusdual.fs.vista.MenuViewLocal;
+import com.campusdual.fs.vista.local.MenuViewLocal;
 
 public class MenuGarajeGestion extends MenuViewLocal {
 

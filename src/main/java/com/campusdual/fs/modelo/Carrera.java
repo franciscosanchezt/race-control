@@ -8,19 +8,19 @@ public class Carrera {
     private int id;
     private String nombre;
     private final ArrayList<Coche> participantes = new ArrayList<>();
-    private TipoDeCarrera tipoDeCarrera;
+    private TipoDeCompeticion tipoDeCompeticion;
     private Garaje garaje = null;
 
 
-    public enum TipoDeCarrera {
+    public enum TipoDeCompeticion {
         ESTANDAR,
         ELIMINACION
     }
 
-    public Carrera(int id, String nombre, TipoDeCarrera tipoDeCarrera) {
-        this.id            = id;
-        this.nombre        = nombre;
-        this.tipoDeCarrera = tipoDeCarrera;
+    public Carrera(int id, String nombre, TipoDeCompeticion tipoDeCompeticion) {
+        this.id                = id;
+        this.nombre            = nombre;
+        this.tipoDeCompeticion = tipoDeCompeticion;
     }
 
     public int getId() {
@@ -43,12 +43,12 @@ public class Carrera {
         return participantes;
     }
 
-    public TipoDeCarrera getTipoDeCarrera() {
-        return tipoDeCarrera;
+    public TipoDeCompeticion getTipoDeCompeticion() {
+        return tipoDeCompeticion;
     }
 
-    public void setTipoDeCarrera(TipoDeCarrera tipoDeCarrera) {
-        this.tipoDeCarrera = tipoDeCarrera;
+    public void setTipoDeCompeticion(TipoDeCompeticion tipoDeCompeticion) {
+        this.tipoDeCompeticion = tipoDeCompeticion;
     }
 
     public Garaje getGaraje() {
@@ -65,7 +65,7 @@ public class Carrera {
             .add("id=" + id)
             .add("premio='" + nombre + "'")
             .add("participantes=" + participantes)
-            .add("tipoDeCarrera=" + tipoDeCarrera)
+            .add("tipoDeCarrera=" + tipoDeCompeticion)
             .add("garaje=" + (garaje != null ? garaje.getNombre() : "null"))
             .toString();
     }

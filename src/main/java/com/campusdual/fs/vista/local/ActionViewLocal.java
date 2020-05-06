@@ -1,4 +1,4 @@
-package com.campusdual.fs.vista;
+package com.campusdual.fs.vista.local;
 
 import io.bretty.console.view.ActionView;
 
