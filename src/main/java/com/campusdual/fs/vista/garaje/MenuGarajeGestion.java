@@ -15,6 +15,7 @@ public class MenuGarajeGestion extends MenuViewLocal {
         this.addMenuItem(new ActionGarajeRenombrar(this, this.garaje));
         this.addMenuItem(new MenuGarajeRegistrarCoches(this, this.garaje));
         this.addMenuItem(new MenuGarajeEliminarCoche(this.garaje));
+        this.addMenuItem(new ActionGarajeRegistroMasivo(this.garaje));
         this.setParentView(parent);
     }
 
