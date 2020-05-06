@@ -8,5 +8,6 @@ public class MenuCarreras extends MenuViewLocal {
         super("Gestionar Carreras", "Gestion de Carreras");
         this.addMenuItem(new ActionCarreraLista());
         this.addMenuItem(new ActionCarreraAgregar());
+        this.addMenuItem(new MenuCarrerasLista());
     }
 }

@@ -6,7 +6,7 @@ import java.util.StringJoiner;
 public class Carrera {
 
     private int id;
-    private String premio;
+    private String nombre;
     private final ArrayList<Coche> participantes = new ArrayList<>();
     private TipoDeCarrera tipoDeCarrera;
     private Garaje garaje = null;
@@ -17,9 +17,9 @@ public class Carrera {
         ELIMINACION
     }
 
-    public Carrera(int id, String premio, TipoDeCarrera tipoDeCarrera) {
+    public Carrera(int id, String nombre, TipoDeCarrera tipoDeCarrera) {
         this.id            = id;
-        this.premio        = premio;
+        this.nombre        = nombre;
         this.tipoDeCarrera = tipoDeCarrera;
     }
 
@@ -31,12 +31,12 @@ public class Carrera {
         this.id = id;
     }
 
-    public String getPremio() {
-        return premio;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setPremio(String premio) {
-        this.premio = premio;
+    public void setNombre(String premio) {
+        this.nombre = premio;
     }
 
     public ArrayList<Coche> getParticipantes() {
@@ -63,7 +63,7 @@ public class Carrera {
     public String toString() {
         return new StringJoiner(", ", Carrera.class.getSimpleName() + "[", "]")
             .add("id=" + id)
-            .add("premio='" + premio + "'")
+            .add("premio='" + nombre + "'")
             .add("participantes=" + participantes)
             .add("tipoDeCarrera=" + tipoDeCarrera)
             .add("garaje=" + (garaje != null ? garaje.getNombre() : "null"))
