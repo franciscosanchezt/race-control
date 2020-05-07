@@ -25,9 +25,10 @@ public class MenuControlTorneoEliminacion extends MenuViewLocal {
         if (torneoEliminacion == null)
             this.addMenuItem(new ActionTorneoAgregar(this, TipoDeCompeticion.ELIMINACION));
         else {
-            this.addMenuItem(new ActionTorneoDescartar(this, TipoDeCompeticion.ELIMINACION));
             println("Torneo: " + torneoEliminacion.getNombre());
             println("Torneo tipo: " + torneoEliminacion.getTipoDeCompeticion());
+            this.addMenuItem(new ActionTorneoDescartar(this, TipoDeCompeticion.ELIMINACION));
+            this.addMenuItem(new ActionTorneoSimulacion(torneoEliminacion));
         }
     }
 }
