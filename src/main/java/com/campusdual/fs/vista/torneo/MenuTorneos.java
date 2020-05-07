@@ -9,7 +9,7 @@ public class MenuTorneos extends MenuViewLocal {
         super("Gestionando Torneos", "Gestor de Torneos");
         this.addMenuItem(new ActionTorneosLista());
         this.addMenuItem(new ActionTorneoAgregar());
-        this.addMenuItem(new ActionTorneoDescartar(TipoDeCompeticion.ESTANDAR));
-        this.addMenuItem(new ActionTorneoDescartar(TipoDeCompeticion.ELIMINACION));
+        this.addMenuItem(new ActionTorneoDescartar(this, TipoDeCompeticion.ESTANDAR));
+        this.addMenuItem(new ActionTorneoDescartar(this, TipoDeCompeticion.ELIMINACION));
     }
 }

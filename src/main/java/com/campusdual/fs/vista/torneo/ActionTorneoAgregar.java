@@ -5,17 +5,20 @@ import com.campusdual.fs.data.TorneoDao;
 import com.campusdual.fs.modelo.TipoDeCompeticion;
 import com.campusdual.fs.modelo.Torneo;
 import com.campusdual.fs.vista.local.ActionViewLocal;
+import com.campusdual.fs.vista.local.IRefreshable;
 
 public class ActionTorneoAgregar extends ActionViewLocal {
 
+    private IRefreshable parent;
     private TipoDeCompeticion tipoDeCompeticion;
 
     public ActionTorneoAgregar() {
         super("Creando Nuevo Torneo", "Crear Torneo");
     }
 
-    public ActionTorneoAgregar(TipoDeCompeticion tipoDeCompeticion) {
+    public ActionTorneoAgregar(IRefreshable parent, TipoDeCompeticion tipoDeCompeticion) {
         this();
+        this.parent            = parent;
         this.tipoDeCompeticion = tipoDeCompeticion;
     }
 
@@ -52,6 +55,8 @@ public class ActionTorneoAgregar extends ActionViewLocal {
                     String nombreCarrera = prompt("Introduce el nombre de la carrera #" + (i + 1), String.class);
                     torneo.getCarreras()[i] = CarreraDao.getInstance().insertarCarrera(nombreCarrera, torneo.getTipoDeCompeticion());
                 }
+                if (parent != null)
+                    parent.refreshView();
             }
         } else
             actionFailed();
