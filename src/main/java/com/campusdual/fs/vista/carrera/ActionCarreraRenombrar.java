@@ -2,13 +2,14 @@ package com.campusdual.fs.vista.carrera;
 
 import com.campusdual.fs.modelo.Carrera;
 import com.campusdual.fs.vista.local.ActionViewLocal;
+import com.campusdual.fs.vista.local.IRefreshable;
 
 public class ActionCarreraRenombrar extends ActionViewLocal {
 
-    private final MenuCarreraGestion parent;
+    private final IRefreshable parent;
     private final Carrera carrera;
 
-    public ActionCarreraRenombrar(MenuCarreraGestion parent, Carrera carrera) {
+    public ActionCarreraRenombrar(IRefreshable parent, Carrera carrera) {
         super("Renombrando Garaje: " + carrera.getNombre(), "Cambiar Nombre");
         this.parent  = parent;
         this.carrera = carrera;

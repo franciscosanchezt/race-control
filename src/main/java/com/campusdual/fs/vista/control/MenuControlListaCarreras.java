@@ -4,7 +4,6 @@ package com.campusdual.fs.vista.control;
 import com.campusdual.fs.data.CarreraDao;
 import com.campusdual.fs.data.TorneoDao;
 import com.campusdual.fs.modelo.Carrera;
-import com.campusdual.fs.vista.carrera.MenuCarreraGestion;
 import com.campusdual.fs.vista.local.ActionViewLocal;
 import com.campusdual.fs.vista.local.MenuViewLocal;
 import io.bretty.console.view.AbstractView;
@@ -33,11 +32,11 @@ public class MenuControlListaCarreras extends ActionViewLocal {
         Collection<Carrera> carreras = CarreraDao.getInstance()
                                                  .getCarreras()
                                                  .stream()
-                                                 .filter(carrera -> TorneoDao.getInstance().carreraEnTorneo(carrera))
+                                                 .filter(carrera -> !TorneoDao.getInstance().carreraEnTorneo(carrera))
                                                  .collect(Collectors.toCollection(ArrayList::new));
         ArrayList<AbstractView> carreramenu = new ArrayList<>();
         for (Carrera carrera : carreras) {
-            carreramenu.add(new MenuCarreraGestion(this, carrera));
+            carreramenu.add(new MenuControlCarrera(this, carrera));
         }
         menuViewLocal.setMenuItems(carreramenu);
     }

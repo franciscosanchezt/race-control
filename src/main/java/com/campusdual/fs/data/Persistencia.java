@@ -7,9 +7,11 @@ import com.campusdual.fs.modelo.Torneo;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.HashMap;
+import java.util.List;
 
 public class Persistencia {
 
@@ -53,4 +55,24 @@ public class Persistencia {
         return true;
     }
 
+    public static boolean guardarPodioCarrera(Path path, Carrera carrera, List<Coche> podio) {
+
+        try (PrintWriter out = new PrintWriter(Files.newOutputStream(path))) {
+            out.println("Carrera: " + carrera);
+            out.println("Tipo de carrera: " + carrera.getTipoDeCompeticion());
+            out.println("Duracion de la carrera: " + carrera.getDuracion());
+            out.println();
+            for (int i = 0; i < podio.size(); i++) {
+                Coche coche = podio.get(i);
+                out.println("Posicion " + (i + 1) + ": " + coche.toCompactString());
+            }
+            out.flush();
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
 }

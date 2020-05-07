@@ -8,6 +8,7 @@ public class MenuControl extends MenuViewLocal {
         super("Controlador de Carreras", "Controlador de Carreras");
         this.addMenuItem(new MenuControlTorneoEstandar());
         this.addMenuItem(new MenuControlTorneoEliminacion());
+        this.addMenuItem(new MenuControlListaCarreras());
     }
 
 
