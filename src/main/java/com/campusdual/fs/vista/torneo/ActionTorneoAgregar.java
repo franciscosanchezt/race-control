@@ -8,18 +8,28 @@ import com.campusdual.fs.vista.local.ActionViewLocal;
 
 public class ActionTorneoAgregar extends ActionViewLocal {
 
+    private TipoDeCompeticion tipoDeCompeticion;
+
     public ActionTorneoAgregar() {
         super("Creando Nuevo Torneo", "Crear Torneo");
+    }
+
+    public ActionTorneoAgregar(TipoDeCompeticion tipoDeCompeticion) {
+        this();
+        this.tipoDeCompeticion = tipoDeCompeticion;
     }
 
     @Override
     public void executeCustomAction() {
         String nombre = this.prompt("Introduce el nombre del Torneo: ", String.class);
         if (nombre.length() > 0) {
-            boolean estandar = confirmDialog("Torneo Estandar?");
-            Torneo torneo = new Torneo(nombre, estandar ? TipoDeCompeticion.ESTANDAR : TipoDeCompeticion.ELIMINACION);
+            if (tipoDeCompeticion == null) {
+                boolean estandar = confirmDialog("Torneo Estandar?");
+                tipoDeCompeticion = estandar ? TipoDeCompeticion.ESTANDAR : TipoDeCompeticion.ELIMINACION;
+            }
+            Torneo torneo = new Torneo(nombre, tipoDeCompeticion);
             boolean created = false;
-            if (estandar) {
+            if (tipoDeCompeticion == TipoDeCompeticion.ESTANDAR) {
                 if (TorneoDao.getInstance().getTorneoEstandar() == null) {
                     TorneoDao.getInstance().setTorneoEstandar(torneo);
                     created = true;

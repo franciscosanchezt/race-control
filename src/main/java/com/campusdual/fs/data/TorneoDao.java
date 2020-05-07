@@ -1,5 +1,6 @@
 package com.campusdual.fs.data;
 
+import com.campusdual.fs.modelo.TipoDeCompeticion;
 import com.campusdual.fs.modelo.Torneo;
 import java.io.Serializable;
 
@@ -39,6 +40,13 @@ public class TorneoDao implements Serializable {
 
     public void setTorneoEliminacion(Torneo torneoEliminacion) {
         this.torneoEliminacion = torneoEliminacion;
+    }
+
+    public void descartarTorneo(TipoDeCompeticion tipoDeCompeticion) {
+        if (tipoDeCompeticion == TipoDeCompeticion.ELIMINACION)
+            setTorneoEliminacion(null);
+        else
+            setTorneoEstandar(null);
     }
 
 

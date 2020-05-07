@@ -19,7 +19,7 @@ public class ActionCarreraRenombrar extends ActionViewLocal {
         String nuevoNombre = this.prompt("Nuevo Nombre: ", String.class);
         if (nuevoNombre.length() > 0) {
             this.carrera.setNombre(nuevoNombre);
-            this.parent.refrescarCarrera();
+            this.parent.refreshView();
             this.actionSuccessful();
         } else
             actionFailed();

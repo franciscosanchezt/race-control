@@ -4,6 +4,7 @@ import com.campusdual.fs.data.CocheDao;
 import com.campusdual.fs.modelo.Coche;
 import com.campusdual.fs.modelo.Garaje;
 import com.campusdual.fs.vista.local.ActionViewLocal;
+import com.campusdual.fs.vista.local.IRefreshable;
 import com.campusdual.fs.vista.local.MenuViewLocal;
 import io.bretty.console.view.AbstractView;
 import java.util.ArrayList;
@@ -13,12 +14,12 @@ import java.util.stream.Collectors;
 public class MenuGarajeRegistrarCoches extends ActionViewLocal {
 
     private final MenuViewLocal menuViewLocal = new MenuViewLocal("Elige un Coche", "");
-    private final MenuGarajeGestion parent;
+    private final IRefreshable parent;
     private final Garaje garaje;
 
     Collection<Coche> coches = CocheDao.getInstance().getCoches();
 
-    public MenuGarajeRegistrarCoches(MenuGarajeGestion parent, Garaje garaje) {
+    public MenuGarajeRegistrarCoches(IRefreshable parent, Garaje garaje) {
         super("Registrando coche en el garage " + garaje.getNombre(), "Registrar Coche");
         this.parent = parent;
         this.garaje = garaje;
@@ -42,7 +43,7 @@ public class MenuGarajeRegistrarCoches extends ActionViewLocal {
                        .collect(Collectors.toCollection(ArrayList::new));
         ArrayList<AbstractView> garagesMenu = new ArrayList<>();
         for (Coche garaje : coches) {
-            garagesMenu.add(new ActionGarajeRegistrarCoche(this.parent, this.garaje, garaje));
+            garagesMenu.add(new ActionGarajeRegistrarCoche((AbstractView) this.parent, this.garaje, garaje));
         }
         menuViewLocal.setMenuItems(garagesMenu);
     }

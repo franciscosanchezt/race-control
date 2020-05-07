@@ -19,12 +19,13 @@ public class MenuCochesLista extends ActionViewLocal {
 
     @Override
     public void executeCustomAction() {
-        refrescarCoches();
+        refreshView();
         menuViewLocal.setParentView(this);
         menuViewLocal.display();
     }
 
-    public void refrescarCoches() {
+    @Override
+    public void refreshView() {
         Collection<Coche> coches = CocheDao.getInstance().getCoches();
         ArrayList<AbstractView> cochesMenu = new ArrayList<>();
         for (Coche coche : coches) {

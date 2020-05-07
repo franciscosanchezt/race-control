@@ -21,12 +21,12 @@ public class MenuCocheListaGarajes extends ActionViewLocal {
 
     @Override
     public void executeCustomAction() {
-        refrescarGarajes();
+        refreshView();
         menuViewLocal.setParentView(this);
         menuViewLocal.display();
     }
 
-    public void refrescarGarajes() {
+    public void refreshView() {
         Collection<Garaje> garajes = GarajeDao.getInstance().getGarajes();
         ArrayList<AbstractView> garagesMenu = new ArrayList<>();
         for (Garaje garaje : garajes) {

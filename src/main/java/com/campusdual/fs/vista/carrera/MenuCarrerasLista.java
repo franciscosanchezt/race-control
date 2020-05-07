@@ -11,21 +11,22 @@ import java.util.Collection;
 
 public class MenuCarrerasLista extends ActionViewLocal {
 
-    private final MenuViewLocal menuViewLocal = new MenuViewLocal("Elige un Garaje", "");
+    private final MenuViewLocal menuViewLocal = new MenuViewLocal("Elige un Carrera", "");
 
     public MenuCarrerasLista() {
-        super("Elige un Garaje", "Editar Garajes");
+        super("Elige una Carrera", "Editar Carrera");
 
     }
 
     @Override
     public void executeCustomAction() {
-        refrescarGarajes();
+        refreshView();
         menuViewLocal.setParentView(this);
         menuViewLocal.display();
     }
 
-    public void refrescarGarajes() {
+    @Override
+    public void refreshView() {
         Collection<Carrera> carreras = CarreraDao.getInstance().getCarreras();
         ArrayList<AbstractView> carreramenu = new ArrayList<>();
         for (Carrera carrera : carreras) {

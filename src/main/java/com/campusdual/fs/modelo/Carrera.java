@@ -11,6 +11,7 @@ public class Carrera implements Serializable {
     private final ArrayList<Coche> participantes = new ArrayList<>();
     private TipoDeCompeticion tipoDeCompeticion;
     private Garaje garaje = null;
+    private boolean finalizada = false;
 
 
     public Carrera(int id, String nombre, TipoDeCompeticion tipoDeCompeticion) {
@@ -47,6 +48,12 @@ public class Carrera implements Serializable {
         this.tipoDeCompeticion = tipoDeCompeticion;
     }
 
+    public String getDuracion() {
+        return tipoDeCompeticion == TipoDeCompeticion.ESTANDAR ?
+               "3 Horas" :
+               Math.max(1, participantes.size() - 1) + " vueltas.";
+    }
+
     public Garaje getGaraje() {
         return garaje;
     }
@@ -55,14 +62,23 @@ public class Carrera implements Serializable {
         this.garaje = garaje;
     }
 
+    public boolean isFinalizada() {
+        return finalizada;
+    }
+
+    public void setFinalizada(boolean finalizada) {
+        this.finalizada = finalizada;
+    }
+
     @Override
     public String toString() {
         return new StringJoiner(", ", Carrera.class.getSimpleName() + "[", "]")
             .add("id=" + id)
-            .add("premio='" + nombre + "'")
+            .add("nombre='" + nombre + "'")
             .add("participantes=" + participantes)
-            .add("tipoDeCarrera=" + tipoDeCompeticion)
-            .add("garaje=" + (garaje != null ? garaje.getNombre() : "null"))
+            .add("tipoDeCompeticion=" + tipoDeCompeticion)
+            .add("garaje=" + (garaje != null ? garaje.getNombre() : "null")) //(garaje != null ? garaje.getNombre() : "null")
+            .add("finalizada=" + finalizada)
             .toString();
     }
 }

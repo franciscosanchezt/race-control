@@ -32,7 +32,8 @@ public class MenuCarreraAgregarCoche extends ActionViewLocal {
         Collection<Coche> coches = CocheDao.getInstance()
                                            .getCoches()
                                            .stream()
-                                           .filter(coche -> !carrera.getParticipantes().contains(coche))
+                                           .filter(coche -> coche.getGaraje() != null &&              //Descartamos los coches que no tiene garaje asignado
+                                                            !carrera.getParticipantes().contains(coche))     //Descartamos los coches que ya estan registrados en esta carrera
                                            .collect(Collectors.toCollection(ArrayList::new));
         ArrayList<AbstractView> cochesMenu = new ArrayList<>();
         for (Coche coche : coches) {

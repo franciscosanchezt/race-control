@@ -3,14 +3,15 @@ package com.campusdual.fs.vista.garaje;
 import com.campusdual.fs.modelo.Coche;
 import com.campusdual.fs.modelo.Garaje;
 import com.campusdual.fs.vista.local.ActionViewLocal;
+import io.bretty.console.view.AbstractView;
 
 public class ActionGarajeRegistrarCoche extends ActionViewLocal {
 
-    private final MenuGarajeGestion parent;
+    private final AbstractView parent;
     private final Garaje garaje;
     private final Coche coche;
 
-    public ActionGarajeRegistrarCoche(MenuGarajeGestion parent, Garaje garaje, Coche coche) {
+    public ActionGarajeRegistrarCoche(AbstractView parent, Garaje garaje, Coche coche) {
         super("Registrando coche en el garaje: " + garaje.getNombre(), "(" + coche.getId() + ") " + coche.getMarca() + ", " + coche.getModelo());
         this.parent = parent;
         this.garaje = garaje;

@@ -20,13 +20,14 @@ public class MenuCarreraEliminarCoche extends ActionViewLocal {
 
     @Override
     public void executeCustomAction() {
-        refrescarCoches();
+        refreshView();
         menuViewLocal.setParentView(this);
         menuViewLocal.display();
 
     }
 
-    public void refrescarCoches() {
+    @Override
+    public void refreshView() {
         Collection<Coche> coches = carrera.getParticipantes();
         ArrayList<AbstractView> cochesMenu = new ArrayList<>();
         for (Coche coche : coches) {
