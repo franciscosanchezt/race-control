@@ -1,0 +1,7 @@
+Torneo: Gp World
+Tipo de torneo: ELIMINACION
+
+Coche: (12) Audi, TT Puntuacion: 15
+Coche: (9) Mercedes, Clase A Puntuacion: 22
+Coche: (6) Opel, Corsa Puntuacion: 24
+Coche: (4) Ferrari, Enzo Puntuacion: 29

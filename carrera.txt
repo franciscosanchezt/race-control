@@ -1,0 +1,5 @@
+Carrera: Carrera[id=0, nombre='Carrera Opel', participantes=[Coche[id=1, marca='Opel', modelo='Corsa', garaje=Opel G], Coche[id=2, marca='Opel', modelo='Astra', garaje=Opel G]], tipoDeCompeticion=ELIMINACION, garaje=Opel G, finalizada=false]
+Duracion de la carrera: 1 vueltas.
+
+Posicion 1: (2) Opel, Astra
+Posicion 2: (1) Opel, Corsa
