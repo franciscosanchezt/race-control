@@ -1,8 +1,10 @@
 package com.campusdual.fs.data;
 
+import com.campusdual.fs.modelo.Carrera;
 import com.campusdual.fs.modelo.TipoDeCompeticion;
 import com.campusdual.fs.modelo.Torneo;
 import java.io.Serializable;
+import java.util.Arrays;
 
 public class TorneoDao implements Serializable {
 
@@ -49,5 +51,13 @@ public class TorneoDao implements Serializable {
             setTorneoEstandar(null);
     }
 
+    public boolean carreraEnTorneo(Carrera carrera) {
+        boolean enTorneo = false;
+        if (getTorneoEstandar() != null && Arrays.stream(getTorneoEstandar().getCarreras()).anyMatch(carrera1 -> carrera == carrera1))
+            enTorneo = true;
+        if (getTorneoEliminacion() != null && Arrays.stream(getTorneoEliminacion().getCarreras()).anyMatch(carrera1 -> carrera == carrera1))
+            enTorneo = true;
+        return enTorneo;
+    }
 
 }
