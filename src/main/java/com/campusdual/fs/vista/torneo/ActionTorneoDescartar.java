@@ -15,6 +15,7 @@ public class ActionTorneoDescartar extends ActionViewLocal {
     public ActionTorneoDescartar(TipoDeCompeticion tipoDeCompeticion) {
         this();
         this.tipoDeCompeticion = tipoDeCompeticion;
+        this.setNameInParentMenu(tipoDeCompeticion == TipoDeCompeticion.ESTANDAR ? "Descartar Torneo Estandar" : "Descartar Torneo Eliminacion");
     }
 
     @Override

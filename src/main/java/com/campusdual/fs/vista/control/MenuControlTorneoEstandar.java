@@ -9,11 +9,11 @@ import com.campusdual.fs.vista.torneo.ActionTorneoDescartar;
 
 public class MenuControlTorneoEstandar extends MenuViewLocal {
 
-    Torneo torneoEstandar = TorneoDao.getInstance().getTorneoEstandar();
+    Torneo torneoEstandar = null;
 
     public MenuControlTorneoEstandar() {
-        super("Torneo de Estandar", "");
-        setNameInParentMenu("Torneo Estandar: " + (torneoEstandar == null ? "-" : torneoEstandar.getNombre()));
+        super("Torneo de Estandar", "Torneo Estandar");
+        torneoEstandar = TorneoDao.getInstance().getTorneoEstandar();
         if (torneoEstandar == null)
             this.addMenuItem(new ActionTorneoAgregar(TipoDeCompeticion.ESTANDAR));
         else {

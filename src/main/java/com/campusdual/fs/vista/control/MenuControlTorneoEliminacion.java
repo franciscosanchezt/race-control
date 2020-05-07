@@ -9,11 +9,11 @@ import com.campusdual.fs.vista.torneo.ActionTorneoDescartar;
 
 public class MenuControlTorneoEliminacion extends MenuViewLocal {
 
-    Torneo torneoEliminacion = TorneoDao.getInstance().getTorneoEliminacion();
+    Torneo torneoEliminacion = null;
 
     public MenuControlTorneoEliminacion() {
-        super("Torneo de Eliminacion", "");
-        setNameInParentMenu("Torneo Eliminacion: " + (torneoEliminacion == null ? "-" : torneoEliminacion.getNombre()));
+        super("Torneo de Eliminacion", "Torneo Eliminacion");
+        torneoEliminacion = TorneoDao.getInstance().getTorneoEliminacion();
         if (torneoEliminacion == null)
             this.addMenuItem(new ActionTorneoAgregar(TipoDeCompeticion.ELIMINACION));
         else
