@@ -2,18 +2,23 @@
 
 _Ejercico Race Control para CampusDual_
 
-## Comenzando 🚀
-
 _Practica de Programación Orientada a Objetos_
 
-Mira **Deployment** para conocer como desplegar el proyecto.
+## Objetivos 🚗
 
+_Se desea crear un programa para controlar todo el ciclo de la celebración de eventos automovilísticos_
 
-### Pre-requisitos 📋
+## Pre-requisitos 📋
 
 _Java 8+_
 
-## Ejecucion 📦
+## Descarga 📦
+
+_Puedes encontrar las descargas en la seccion de releases:_
+
+[Lanzamientos](releases/)
+
+## Ejecucion 🚀
 
 _Desde la consola, en la ruta del archivo:_
 
