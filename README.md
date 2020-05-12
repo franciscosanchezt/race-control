@@ -16,7 +16,7 @@ _Java 8+_
 
 _Puedes encontrar las descargas en la seccion de releases:_
 
-[Lanzamientos](releases/)
+[Lanzamientos](https://github.com/franciscosanchezt/race-control/releases)
 
 ## Ejecucion 🚀
 
